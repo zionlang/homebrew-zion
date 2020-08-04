@@ -21,7 +21,7 @@ class Zion < Formula
       system "make"
     end
 
-    system "install.sh", "build", prefix
+    system "./install.sh", "build", prefix
 
   end
 

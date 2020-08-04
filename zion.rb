@@ -23,6 +23,8 @@ class Zion < Formula
 
     system "./install.sh", "build", prefix
 
+    pkgshare.install "runtime"
+    pkgshare.install "lib"
   end
 
   test do

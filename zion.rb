@@ -4,7 +4,7 @@ class Zion < Formula
   url "file:///tmp/v0.3.0.tar.gz"
   # https://github.com/zionlang/zion/archive/v0.3.tar.gz"
   # sha256 "9b95c6a23e755366083e5693f0de07a1a61b3a5f5a0fdff8c7c15905c96eb5c9"
-  sha256 "e9e669ffdd28ab3cff27256ca6f2ac85986932fc093f58acec97dd1e7c0f7a30"
+  sha256 "784a04db180292f3229eacdbd47b221fedcff63cb7a689244196e38fa58f33a3"
   license "MIT License"
   version "0.3.0"
 

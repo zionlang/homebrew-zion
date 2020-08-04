@@ -1,7 +1,8 @@
 class Zion < Formula
   desc "A statically-typed strict garbage-collected powerful but not too-powerful readable programming language with enough side-effects to make it fun."
   homepage "https://zionlang.org/"
-  url "file:///Users/wbbradley/src/homebrew-zion"  # /file:https://github.com/zionlang/zion/archive/v0.3.tar.gz"
+  debugger
+  url "https://github.com/zionlang/zion/archive/v0.3.tar.gz"
   # sha256 "9b95c6a23e755366083e5693f0de07a1a61b3a5f5a0fdff8c7c15905c96eb5c9"
   license "MIT License"
   version "0.3.0"
@@ -15,6 +16,7 @@ class Zion < Formula
   def install
 
     mkdir "build" do
+      raise
       system "cmake", "-G", "Unix Makefiles", "..", *std_cmake_args
       system "make"
     end

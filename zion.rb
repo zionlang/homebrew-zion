@@ -17,9 +17,7 @@ class Zion < Formula
   def install
 
     mkdir "build" do
-      raise
-      system "cmake", "-G", "Unix Makefiles", "..", *std_cmake_args
-      system "make"
+      system "cmake", "-G", "Unix Makefiles", ".."
     end
 
     # system "cmake", ".", 

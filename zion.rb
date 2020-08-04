@@ -17,20 +17,12 @@ class Zion < Formula
   def install
 
     mkdir "build" do
-      system "echo", "cmake", "-G", "Unix Makefiles", "..", *std_cmake_args
-      raise
+      system "cmake", "-G", "Unix Makefiles", "..", *std_cmake_args
+      system "make"
     end
 
-    # system "cmake", ".", 
-    # llvm_dir = "#{prefix}/opt/llvm"
-    # system \
-    #   "LDFLAGS=\"-L#{llvm_dir}/lib\" " \
-    #   "CPPFLAGS=\"-L#{llvm_dir}/include\" " \
-    #   "PATH=\"#{llvm_dir}/bin:$PATH\" " \
-    #   "make " \
-    #   "BUILD_DIR=build " \
-    #   "prefix=\"#{prefix}\" " \
-    #   "man1dir=\"#{man}/man1\" "
+    system "install.sh", "build", prefix
+
   end
 
   test do

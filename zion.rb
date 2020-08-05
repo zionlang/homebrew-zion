@@ -4,7 +4,7 @@ class Zion < Formula
   url "https://github.com/zionlang/zion/archive/master.tar.gz"
   sha256 "1416b89a2aaad822262ac0c992227a304e1257c0fa0ced533f6c65da3c8379bd"
   license "MIT License"
-  version "0.3.0"
+  version "0.3.1"
 
   depends_on "bdw-gc"
   depends_on "cmake" => :build
@@ -39,5 +39,7 @@ class Zion < Formula
     # The installed folder is not in the path, so use the entire path to any
     # executables being tested: `system "#{bin}/program", "do", "something"`.
     system "#{bin}/zion", "test"
+    (testpath/"check.zion").write "fn fib(n) { return n < 2 ? 1 : (fib(n-1) + fib(n-2)) } fn main() { print(fib(10)) }"
+    assert_match "89", shell_output "#{bin}/zion \"#{testpath}/check\""
   end
 end

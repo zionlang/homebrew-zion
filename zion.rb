@@ -40,6 +40,6 @@ class Zion < Formula
     # executables being tested: `system "#{bin}/program", "do", "something"`.
     system "#{bin}/zion", "test"
     (testpath/"check.zion").write "fn fib(n) { return n < 2 ? 1 : (fib(n-1) + fib(n-2)) } fn main() { print(fib(10)) }"
-    assert_match("89", shell_output("\"#{bin}/zion \"#{testpath/"check.zion"}\""))
+    assert_match("89", shell_output("\"#{bin}/zion\" \"#{testpath/"check.zion"}\""))
   end
 end

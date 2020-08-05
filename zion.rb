@@ -1,10 +1,10 @@
 class Zion < Formula
   desc "A statically-typed strict garbage-collected powerful but not too-powerful readable programming language with enough side-effects to make it fun."
   homepage "https://zionlang.org/"
-  url "file:///tmp/v0.3.0.tar.gz"
-  # https://github.com/zionlang/zion/archive/v0.3.tar.gz"
+  # url "file:///tmp/v0.3.0.tar.gz"
+  url "https://github.com/zionlang/zion/archive/master.tar.gz"
   # sha256 "9b95c6a23e755366083e5693f0de07a1a61b3a5f5a0fdff8c7c15905c96eb5c9"
-  sha256 "c0f3a6e1aadd28a2b1d4221d6b77cef90795c99e34dffcab02ef64667ffde40a"
+  sha256 `curl #{url} 2>/dev/null | shasum -a 256 | awk '{ print $1 }'`.strip
   license "MIT License"
   version "0.3.0"
 
@@ -13,6 +13,8 @@ class Zion < Formula
   depends_on "pkg-config"
   depends_on "libsodium"
   depends_on "bdw-gc"
+
+  patch :DATA
 
   def install
 

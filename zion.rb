@@ -7,7 +7,7 @@ class Zion < Formula
   version "0.3.0"
 
   depends_on "cmake" => :build
-  depends_on "llvm@10"
+  # depends_on "llvm@10"
   depends_on "pkg-config"
   depends_on "libsodium"
   depends_on "bdw-gc"
@@ -17,7 +17,6 @@ class Zion < Formula
   def install
 
     mkdir "build" do
-      raise
       system "cmake", "-G", "Unix Makefiles", "..", *std_cmake_args
       system "make"
     end

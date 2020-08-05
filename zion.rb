@@ -4,9 +4,7 @@ class Zion < Formula
   tarfile = `/tmp/v0.3.0.tar.gz`
   url "file://#{tarfile}"
   # url "https://github.com/zionlang/zion/archive/master.tar.gz"
-  # sha256 "9b95c6a23e755366083e5693f0de07a1a61b3a5f5a0fdff8c7c15905c96eb5c9"
-  # sha256 `curl #{url} 2>/dev/null | shasum -a 256 | awk '{ print $1 }'`.strip
-  sha256 `<#{tarfile} shasum -a 256 | awk '{ print $1 }'`.strip
+  sha256 "9b95c6a23e755366083e5693f0de07a1a61b3a5f5a0fdff8c7c15905c96eb5c9"
   license "MIT License"
   version "0.3.0"
 

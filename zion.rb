@@ -29,15 +29,6 @@ class Zion < Formula
   end
 
   test do
-    # `test do` will create, run in and delete a temporary directory.
-    #
-    # This test will fail and we won't accept that! For Homebrew/homebrew-core
-    # this will need to be a test that verifies the functionality of the
-    # software. Run the test with `brew test zion`. Options passed
-    # to `brew install` such as `--HEAD` also need to be provided to `brew test`.
-    #
-    # The installed folder is not in the path, so use the entire path to any
-    # executables being tested: `system "#{bin}/program", "do", "something"`.
     system "#{bin}/zion", "test"
     (testpath/"check.zion").write "fn fib(n) { return n < 2 ? 1 : (fib(n-1) + fib(n-2)) } fn main() { print(fib(10)) }"
     assert_match("89", shell_output("\"#{bin}/zion\" \"#{testpath/"check.zion"}\""))

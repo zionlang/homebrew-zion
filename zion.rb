@@ -2,7 +2,7 @@ class Zion < Formula
   desc "A statically-typed strict garbage-collected powerful but not too-powerful readable programming language with enough side-effects to make it fun."
   homepage "https://zionlang.org/"
   url "https://github.com/zionlang/zion/archive/master.tar.gz"
-  sha256 "cc55cfa676d2657c58ffbe4c345a8c73f6c563179689badc5ddaa0b5a5476cf7"
+  sha256 "09b9e92192100a5731c94ac865932b4e1a65e705b98f825b60aafe033f179214"
   license "MIT License"
   version "0.3.2"
 

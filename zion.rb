@@ -4,7 +4,7 @@ class Zion < Formula
   url "https://github.com/zionlang/zion/archive/master.tar.gz"
   sha256 "a616e2f32c1d2d145c264cf48fa77610b2a587d1359d9e4e47b5d61028e1e927"
   license "MIT License"
-  version "0.3.0"
+  version "0.3.1"
 
   depends_on "cmake" => :build
   depends_on "llvm@10"
